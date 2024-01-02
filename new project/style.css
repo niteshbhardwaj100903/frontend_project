@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: rgb(12, 12, 12);
+}
+
+/*--------------------------- Navigation Section --------------------------------*/
+
+header{
+    width: 100%;
+    min-height:100vh;
+}
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem;
+    margin-top: 2rem;
+}
+.navbar-container .logo img{
+    transform: rotate(0deg);
+    transition: .3s ease-in-out;
+}
+.navbar-container .logo img:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 15px rgba(7, 187, 169, 0.852);
+    border-radius: 50%;
+}
+.navbar-container .nav-menu{
+    display: flex ;
+    flex-direction: row ;
+    align-items: center;
+}
+.navbar-container .nav-menu .list{
+    display:flex;
+    flex-direction: row;
+}
+.navbar-container .nav-menu .list a{
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    font-weight:600;
+    margin-right: 3.5rem;
+    transition: .2s ease-in-out;
+}
+.navbar-container .nav-menu .list a:hover{
+    color: rgba(160, 5, 5, 0.868);
+}
+.navbar-container .nav-menu .shop-btn a{
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+    font-weight:400;
+    padding: .7rem 2.5rem;
+    background-color: rgb(38, 38, 38);
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+.navbar-container .nav-menu .shop-btn a:hover{
+    box-shadow: 0px 1px 40px 5px rgba(187, 7, 7, 0.708);
+    border-radius: 50px;
+    background-color: transparent;
+}
+
+/*------------------------ Hero Section --------------------------------*/
+
+.hero-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0 5rem;
+    gap:15rem;
+}
+.hero-container .hero-img img{
+    width:14rem;
+    position:relative;
+    top:-11rem;
+    left: 6.2rem;
+    transform: translateY(0px);
+    transition: .4s ease-in-out;
+}
+.hero-container .hero-img img:hover{
+    transform: translateY(10px);
+    cursor: pointer;
+}
+.hero-container .right-side> img{
+    width: 17rem;
+    margin-top:2.8rem;
+    margin-left: 3.5rem;
+}
+.hero-container .right-side h1{
+    color: rgb(245, 245, 245);
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight:600;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    /* border: 1px solid red; */
+    width: 60%;
+}
+.hero-container .right-side h1:hover{
+    color: rgba(255, 0, 0, 0.611);
+}
+.hero-container .right-side>h4{
+    color: rgb(245, 245, 245);
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+    font-weight:600;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.hero-container .right-side>p{
+    color: rgb(179, 179, 179);
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+    font-weight:400;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+.hero-container .right-side .add-to-bag{
+    display: flex;
+    flex-direction: row;
+    padding: .6rem .5rem;
+    background-color:rgb(38, 38, 38) ;
+    align-items: center;
+    justify-content: space-around;
+    width:55%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: .3s ease-in-out;
+}
+.hero-container .right-side .add-to-bag:hover{
+    box-shadow: 0px 1px 40px 5px rgba(187, 7, 7, 0.708);
+    border-radius: 50px;
+    background-color: transparent;
+}
+.hero-container .right-side .add-to-bag img{
+    width: 1rem;
+}
+.hero-container .right-side .add-to-bag p{
+    color: rgb(245, 245, 245);
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+    font-weight:400;
+}
+.hero-container .right-side .add-to-bag h4{
+    color: rgb(245, 245, 245);
+    font-family: 'Poppins', sans-serif;
+    font-size: .9rem;
+    font-weight:600;
+}
+/*-------------------------------Advertisement Banner ---------------------------*/
+
+.banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 6rem;
+    margin: 0 0 3rem 0;
+    /* border: 1px solid gold; */
+}
+.banner img{
+    transition: .3s ease-in-out;
+}
+.banner img:nth-child(1):hover,img:nth-child(2):hover,img:nth-child(3):hover,img:nth-child(4):hover{
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+/* ---------------------------- Main Section ----------------------------*/
+/* -------------- Specs Section ------------------------ */
+
+main .specs{
+    /* border: 1px solid gold; */
+    margin-top:5rem;
+    margin-bottom: 5rem;
+}
+main .specs .specs-img{
+   /* border: 1px solid aqua; */
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   margin: auto;
+   margin-bottom: 2rem;
+}
+main .specs .specs-img img{
+    width:12rem;
+}
+.specs .specs-details{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: auto;
+    justify-content:space-around;
+}
+.specs .specs-details .specs-text .specification{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(245, 245, 245);
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.specs .specs-details .specs-text .specification:hover{
+    transform: translateY(-7px);
+    color: rgba(255, 0, 0, 0.847);
+}
+.specs .specs-details .specs-text .specification:nth-child(1),.specification:nth-child(4){
+    margin-left: 2rem;
+}
+.specs .specs-details .specs-text .specification h4{
+    font-size: .8rem;
+    font-weight:600;
+}
+.specs .specs-details .specs-text .specification h6{
+    font-weight:400;
+    color: rgb(210, 210, 210);
+    margin-top: .2rem;
+}
+.specs .specs-details .headphone-img img{
+    margin-top:2rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.specs .specs-details .headphone-img img:hover{
+    transform: translateY(-10px);
+}
+
+/*------------------------ Case Section -------------------------*/
+
+main .case{
+    /* border: 1px solid gold; */
+    margin-bottom: 5rem;
+}
+.case .case-text-img{
+    /* border: 1px solid aqua; */
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top:2rem;
+    margin-bottom: 1rem;
+}
+.case .case-text-img img{
+    width: 10rem;
+}
+.case .case-detail{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: auto;
+    padding-top: 2rem;
+}
+.case .case-detail .case-img img{
+    width: 16rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.case .case-detail .case-img img:hover{
+    transform: translateY(-10px);
+}
+.case .case-detail .case-text{
+    /* border: 1px solid orange; */
+    margin-left: auto;
+}
+.case .case-detail .case-text p{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(182, 180, 180);
+    font-weight:400;
+    font-size: .9rem;
+    margin-top: 5rem;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+.case .case-detail .case-text .info-btn{
+    padding: .7rem 1rem;
+    background-color: rgb(57, 57, 57);
+    /* border: 1px solid white; */
+    width: 60%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.case .case-detail .case-text .info-btn:hover{
+    box-shadow: 0px 1px 40px 5px rgba(187, 7, 7, 0.708);
+    border-radius: 50px;
+    background-color: transparent;
+}
+.case .case-detail .case-text .info-btn img{
+    width: 1.2rem;
+}
+.case .case-detail .case-text .info-btn a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+}
+/*---------------------------- Single Headphone Section -------------------*/
+
+main .headphone{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: row;
+    width: 70%;
+    background-color: rgb(24, 24, 24);
+    border-radius: 15px;
+    margin: auto;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+main .headphone .headphone-text h1{
+    font-family: 'Poppins', sans-serif;
+    font-size:1.2rem;
+    font-weight: 600;
+    color: rgb(250, 246, 246);
+    margin-bottom: .9rem;
+    margin-left:3rem;
+}
+main .headphone .headphone-text p{
+    font-family: 'Poppins', sans-serif;
+    font-size:.8rem;
+    font-weight:500;
+    color: rgb(146, 146, 146);
+    margin-bottom: .9rem;
+    margin-left:3rem;
+}
+main .headphone .headphone-text .buy-now{
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding:.7rem 1.2rem;
+    width:46%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin-left:3rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+main .headphone .headphone-text .buy-now:hover{
+    box-shadow: 0px 1px 40px 5px rgba(187, 7, 7, 0.708);
+    border-radius: 50px;
+}
+main .headphone .headphone-text .buy-now img{
+    width: 1rem;
+}
+main .headphone .headphone-text .buy-now a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+}
+main .headphone .right-img img{
+    width:17rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+main .headphone .right-img img:hover{
+    transform: translateY(-10px);
+}
+
+/*----------------------------------Headphone Buy Now Section --------------------*/
+main .products-container{
+    /* border: 1px solid aqua; */
+    margin-top:4rem;
+}
+main .products-container .choose-img{
+    /* border: 1px solid gold; */
+    width: 50%;
+    padding: 1rem 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+main .products-container .choose-img img{
+    width: 17rem;
+}
+
+/* ----------------------- Products Card Section ----------------------------- */
+
+.products-container .products{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    gap: 40px;
+    width: 60%;
+    align-items: center;
+    justify-content:center;
+    margin: auto;
+    padding: 5rem 0 5rem 0;
+}
+.products-container .products .product1{
+    /* border: 1px solid yellow; */
+    margin-top: 1rem;
+    padding:.6rem;
+    height: 125px;
+    background-color: rgb(23, 23, 23);
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+.products-container .products .product1:hover{
+    box-shadow: 0px 1px 40px 5px rgba(187, 7, 7, 0.708);
+    border-radius: 10px;
+}
+.products .product1 .product1-img img{
+    width: 5rem;
+    position: relative;
+    bottom: 3.2rem;
+    left: 1.3rem;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.products .product1 .product1-img img:hover{
+    transform:translateY(-10px);
+}
+.products .product1 .product-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    position: relative;
+    bottom: 2.5rem;
+}
+.products .product1 .product-details .name h6{
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    font-weight:500;
+}
+.products .product1 .product-details .name p{
+    color: rgb(163, 163, 163);
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    font-weight:500;
+    margin-top: .1rem;
+}
+.products .product1 .product-details .shop-img{
+    background-color: black;
+    /* border: 1px solid red; */
+    width:30%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: .4rem;
+    transition: .3s ease-in-out;
+}
+.products .product1 .product-details .shop-img:hover{
+    box-shadow: 0px 1px 20px 5px rgba(7, 172, 187, 0.708);
+    border-radius: 5px;
+    cursor: pointer;
+    transform:translateY(-7px);
+}
+.products .product1 .product-details .shop-img img{
+    width: 1rem;
+    margin-bottom: .2rem;
+}
+
+/*--------------------------Footer Section -----------------*/
+footer{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid gold; */
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+}
+
+footer .footer-logo img{
+    /* border: 1px solid red; */
+    margin-left: 5rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+footer .footer-logo img:hover{
+    transform: rotate(360deg);
+    box-shadow: 0px 0px 40px 15px rgba(187, 7, 7, 0.852);
+    border-radius: 50%;
+
+}
+footer .footer-menu{
+    display: flex;
+    flex-direction: column;
+}
+footer .footer-menu h4{
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: .8rem;
+    margin-bottom: .6rem;
+}
+footer .footer-menu a{
+    text-decoration: none;
+    color: rgb(165, 163, 163);
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+    margin-bottom: .4rem;
+    transition: .2s ease-in-out;
+}
+footer .footer-menu a:hover{
+    color: rgba(247, 7, 7, 0.905);
+}
+footer .email-social-media .email{
+    background-color: rgb(28, 28, 28);
+    padding:.8rem 1rem .8rem .5rem;
+    border-radius: 5px;
+    margin-top: .9rem;
+    transition: .3s ease-in-out;
+    /* border: 1px solid yellowgreen; */
+}
+footer .email-social-media .email:hover{
+    border-radius: 5px;
+    box-shadow: 0px 1px 30px 5px rgba(187, 7, 7, 0.708);
+}
+footer .email-social-media .email button{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: .5rem .8rem .5rem .8rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    /* border: 1px solid aqua; */
+}
+footer .email-social-media .email button:hover{
+    border-radius: 5px;
+    box-shadow: 0px 1px 20px 1px rgba(230, 230, 230, 0.708);
+}
+footer .btn-img{
+    width: 1rem;
+    /* border: 1px solid red; */
+    position: relative;
+    top:1.9px;
+    margin-right:8px;
+}
+footer .email-social-media .email ::placeholder{
+    background-color: rgb(28, 28, 28);
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
+    color: rgb(244, 244, 244);
+    padding: 0 0 0 5px;
+}
+footer .email-social-media .email :focus{
+   background-color: rgb(13, 13, 13);
+   color: rgb(255, 255, 255);
+   border-radius: 0px 10px 10px 0px;
+   transition: .3s ease-in-out;
+}
+input[type="email"]{
+    border: none;
+}
+input[type="email"]:invalid{
+    background-color: rgb(153, 9, 9);
+    color: #fff;
+}
+input[type="email"]:valid{
+    background-color: rgb(0, 103, 14);
+    color: #fff;
+}
+footer .email-social-media .social-icons img{
+    width: 1.7rem;
+    margin-right: 10px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+footer .email-social-media .social-icons img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 1px 20px 1px rgba(255, 255, 255, 0.708);
+    border-radius: 5px;
+}
